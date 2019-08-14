@@ -1,3 +1,7 @@
 import React, { useState } from "react";
 
-export default function Form() {}
+const Form = props => {
+  return <div>test</div>;
+};
+
+export default Form;
