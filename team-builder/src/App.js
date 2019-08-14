@@ -6,10 +6,15 @@ import Form from "./Components/Form.js";
 
 function App() {
   const [teamList, setTeamList] = useState(data);
+
+  const addMember = member => {
+    setTeamList([...teamList, member]);
+  };
+
   return (
     <div className="App">
       <h1>Add A Member</h1>
-      <Form />
+      <Form addMember={addMember} />
       <h1>BEHOLD, Your Team!</h1>
       <TeamList teamList={teamList} />
     </div>
